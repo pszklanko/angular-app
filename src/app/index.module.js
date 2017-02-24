@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('angularApp', ['ui.router', 'ui.bootstrap', 'toastr']);
+    .module('angularApp', ['ui.router', 'ui.bootstrap', 'ui.router.tabs', 'toastr']);
 
 })();

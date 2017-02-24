@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, $state, webDevTec, toastr, TabService) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -35,5 +35,16 @@
         awesomeThing.rank = Math.random();
       });
     }
+
+    function initialise() {
+
+    vm.go = function(state) {
+      $state.go(state);
+    };
+
+    vm.tabData = TabService.tabs;
+  }
+
+  initialise();
   }
 })();
