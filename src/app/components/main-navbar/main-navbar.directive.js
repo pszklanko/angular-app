@@ -9,8 +9,8 @@
   function mainNavbar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
-      controller: NavbarController,
+      templateUrl: 'app/components/main-navbar/main-navbar.html',
+      controller: MainNavbarController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -18,7 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($state, TabService) {
+    function MainNavbarController($state, TabsService) {
       var vm = this;
 
       function initialise() {
@@ -27,7 +27,7 @@
         $state.go(state);
       };
 
-      vm.tabData = TabService.tabs;
+      vm.tabData = TabsService.tabs;
     }
 
     initialise();

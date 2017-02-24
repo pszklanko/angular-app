@@ -3,20 +3,18 @@
 
   angular
     .module('angularApp')
-    .service('TabService', TabService);
+    .service('TabsService', TabsService);
 
   /** @ngInject */
-  function TabService() {
+  function TabsService() {
     this.tabs = [
       {
         heading: '<i>Home</i>',
         route: 'home'
-        //templateUrl: 'app/main/main.html'
       },
       {
         heading: '<i>About</i>',
         route: 'about'
-        //templateUrl: 'app/about/about.html'
       },
       {
         heading: '<i>Contact</i>',

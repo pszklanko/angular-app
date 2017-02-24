@@ -19,17 +19,17 @@
         controller: 'AboutController',
         controllerAs: 'about'
       }).state('contact', {
-        url: '/contact`',
+        url: '/contact',
         templateUrl: 'app/contact/contact.html',
         controller: 'ContactController',
         controllerAs: 'contact'
       }).state('news', {
-        url: '/news`',
+        url: '/news',
         templateUrl: 'app/news/news.html',
         controller: 'NewsController',
         controllerAs: 'news'
       }).state('hobby', {
-        url: '/hobby`',
+        url: '/hobby',
         templateUrl: 'app/hobby/hobby.html',
         controller: 'HobbyController',
         controllerAs: 'hobby'
