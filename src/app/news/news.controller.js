@@ -6,6 +6,6 @@
     .controller('NewsController', NewsController);
 
   function NewsController() {
-    var vm = this;
+    // var vm = this;
   }
 })();

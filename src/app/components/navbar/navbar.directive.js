@@ -3,10 +3,10 @@
 
   angular
     .module('angularApp')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('mainNavbar', mainNavbar);
 
   /** @ngInject */
-  function acmeNavbar(TabService) {
+  function mainNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',

@@ -7,6 +7,6 @@
 
   /** @ngInject */
   function HobbyController() {
-    var vm = this;
+    // ar vm = this;
   }
 })();

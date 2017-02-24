@@ -7,6 +7,6 @@
 
   /** @ngInject */
   function ContactController() {
-    var vm = this;
+    // var vm = this;
   }
 })();
