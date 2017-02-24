@@ -27,7 +27,7 @@
         $state.go(state);
       };
 
-      vm.tabData = TabsService.tabs;
+      vm.tabData = TabsService.getTabs();
     }
 
     initialise();

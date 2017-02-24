@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function TabsService() {
-    this.tabs = [
+    var _tabs = [
       {
         heading: '<i>Home</i>',
         route: 'home'
@@ -29,5 +29,9 @@
         route: 'hobby'
       }
     ]
+
+    this.getTabs = function() {
+      return _tabs;
+    }
   }
 })();
