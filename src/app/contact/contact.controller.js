@@ -6,18 +6,7 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController($state, TabService) {
+  function ContactController() {
     var vm = this;
-
-    function initialise() {
-
-    vm.go = function(state) {
-      $state.go(state);
-    };
-
-    vm.tabData = TabService.tabs;
-  }
-
-  initialise();
   }
 })();

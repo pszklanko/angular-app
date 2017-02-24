@@ -6,18 +6,7 @@
     .controller('HobbyController', HobbyController);
 
   /** @ngInject */
-  function HobbyController($state, TabService) {
+  function HobbyController() {
     var vm = this;
-
-    function initialise() {
-
-    vm.go = function(state) {
-      $state.go(state);
-    };
-
-    vm.tabData = TabService.tabs;
-  }
-
-  initialise();
   }
 })();

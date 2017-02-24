@@ -6,13 +6,10 @@
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function acmeNavbar(TabService) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
-      scope: {
-          creationDate: '='
-      },
       controller: NavbarController,
       controllerAs: 'vm',
       bindToController: true
@@ -21,11 +18,19 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController($state, TabService) {
       var vm = this;
 
-      // "vm.creationDate" is available by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
+      function initialise() {
+
+      vm.go = function(state) {
+        $state.go(state);
+      };
+
+      vm.tabData = TabService.tabs;
+    }
+
+    initialise();
     }
   }
 

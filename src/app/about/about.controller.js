@@ -6,18 +6,7 @@
     .controller('AboutController', AboutController);
 
   /** @ngInject */
-  function AboutController($state, TabService) {
+  function AboutController() {
     var vm = this;
-
-    function initialise() {
-
-    vm.go = function(state) {
-      $state.go(state);
-    };
-
-    vm.tabData = TabService.tabs;
-  }
-
-  initialise();
   }
 })();
